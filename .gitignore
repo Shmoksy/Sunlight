@@ -1,0 +1,34 @@
+using System;
+
+class Sunlight
+{
+    public static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        Console.WriteLine("{0}{1}{0}", new string('.', ((n * 3) - 1) / 2), new string('*', 1));
+        for (int i = 1, f = 2; i <= n - 1; i++, f++)
+        {
+            Console.WriteLine("{0}{1}{2}{1}{2}{1}{0}", new string('.', i), new string('*', 1), new string('.', ((n * 3) / 2) - f));
+        }
+        for (int e = 1; e <= n; e++)
+        {
+            if (e < ((n + 1) / 2))
+            {
+                Console.WriteLine("{0}{1}{0}", new string('.', n), new string('*', n));
+            }
+            if (e == ((n + 1) / 2))
+            {
+                Console.WriteLine("{0}", new string('*', n * 3));
+            }
+            if (e > ((n + 1) / 2))
+            {
+                Console.WriteLine("{0}{1}{0}", new string('.', n), new string('*', n));
+            }
+        }
+            for (int i = n - 1, f = (n - 1) / 2; f < ((n * 3) -2) / 2;  i--, f++)
+            {
+                Console.WriteLine("{0}{1}{2}{1}{2}{1}{0}", new string('.', i), new string('*', 1), new string('.', f));
+            }
+                Console.WriteLine("{0}{1}{0}", new string('.', ((n * 3) - 1) / 2), new string('*', 1));
+            }
+}
